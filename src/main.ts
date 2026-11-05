@@ -18,6 +18,7 @@ async function bootstrap() {
 
   const port = Number(process.env.PORT ?? 4000);
   await app.listen(port, '0.0.0.0');
-  console.log(`한빛수학 백엔드 실행 중: http://localhost:${port}`);
+  // Render에서는 내부 포트(10000)로 켜지고, 바깥 주소는 https://<서비스 이름>.onrender.com
+  console.log(`한빛수학 백엔드 실행 중 (포트 ${port})`);
 }
 bootstrap();
